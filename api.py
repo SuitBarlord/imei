@@ -30,7 +30,7 @@ class MyAPI(RequestsTask):
             "serviceId": int(service_id)
         }
         external_data = await self.async_fetch_post('https://api.imeicheck.net/v1/checks', data, self.headers)
-        print(external_data)
+        # print(external_data)
         return jsonify(external_data)
     
     async def check_imeis(self, imeis:list, service_id):
